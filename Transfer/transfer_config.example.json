@@ -1,0 +1,15 @@
+{
+  "case": "laoyangcun",
+  "pretrained": "Weights\\FFSR_PointNet\\best_sanjiang_pretrained.pth",
+  "low_res": "Data\\dataset\\LaoYangCun_LR.h5",
+  "high_res": "Data\\dataset\\LaoYangCun_HR.h5",
+  "out_dir": "Transfer\\outputs\\laoyangcun_light",
+  "use_samples": 36,
+  "num_epochs": 200,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "rank": 128,
+  "context_points": 8192,
+  "freeze_encoder": true,
+  "seed": 1
+}

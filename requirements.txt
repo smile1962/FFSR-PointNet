@@ -8,6 +8,7 @@ pandas==3.0.3
 rasterio==1.4.4
 scikit_learn==1.9.0
 scipy==1.17.1
-skimage==0.0
+scikit-image>=0.22
 torch==2.9.1+cu128
 tqdm==4.67.1
+geopandas>=1.0

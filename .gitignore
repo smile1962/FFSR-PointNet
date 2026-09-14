@@ -1,0 +1,43 @@
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# ---------------- Virtual environments ----------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------- IDE / editors ----------------
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---------------- Jupyter ----------------
+.ipynb_checkpoints/
+
+# ---------------- OS ----------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------- Project outputs ----------------
+# Evaluation / rendering outputs are written here at runtime
+Results/
+Transfer/outputs/
+Transfer/validation/
+comparison_frames_*/
+*.mp4
+
+# ---------------- Model checkpoints ----------------
+# Trained weights are distributed separately
+*.pth
+*.ckpt
+*.pt
