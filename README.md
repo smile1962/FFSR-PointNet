@@ -82,19 +82,6 @@ pip install -r requirements.txt
 
 All commands in this document are run **from the repository root** unless stated otherwise.
 
-### Data (`Data/dataset/`)
-
-> **⚠️ The full datasets are NOT included in this repository** — they are far too
-> large and the underlying hydrodynamic simulation results are subject to
-> data-sharing restrictions.
->
-> Instead, `Data/dataset/` ships a **dummy dataset**: synthetic data with
-> **exactly the same structure** (HDF5 key naming, per-sample shape, dtype and
-> attributes) but only **1–2 samples per file**, so that you can run and verify
-> the whole pipeline end-to-end. See [`Data/dataset/README.md`](Data/dataset/README.md)
-> for the full per-file specification and instructions on plugging in the real data.
->
-> The dummy values are **physically meaningless** — do not report metrics computed on them.
 
 | File | Case | Description |
 |---|---|---|
@@ -109,8 +96,7 @@ Grid datasets for the CNN baselines live in `Data/dataset/Unet/`. Normalization 
 
 ### Pretrained weights (`Weights/`)
 
-> **⚠️ Pretrained checkpoints are NOT included in this repository** (they exceed the
-> hosting limits). The folder only contains a placeholder `readme.txt`.
+> **⚠️ Pretrained checkpoints are NOT included in this repository** (the files are too large; please contact the authors if needed). The folder only contains a placeholder `readme.txt`.
 > Run the training commands in §3–§5 to produce them, or place your own checkpoints
 > at the paths below.
 
