@@ -20,7 +20,7 @@ Flash floods in mountainous regions pose severe threats, making high-resolution 
 
 ```text
 FFSR-PointNet/
-├── FFSR-PointNet/                    # Full-parameter FFSR-PointNet (point cloud)
+├── SR-PointNet/                      # Full-parameter FFSR-PointNet (point cloud)
 │   └── main/
 │       ├── config.py                 # CLI config for training / validation
 │       ├── run.py                    # entry called by scripts/train_original.py
@@ -30,7 +30,7 @@ FFSR-PointNet/
 │       ├── speed_test.py             # single-sample inference timing
 │       ├── calculate_indices.py      # reusable classification / regression metrics
 │       ├── compare_820_models.py     # two-folder comparison -> comparison_820.xlsx
-│       ├── model/                    # FFSRP.py (SR-PointNet), FFSRP_v2.py (FFSR-PointNet)
+│       ├── model/                    # FFSRP.py (original SR-PointNet), FFSRP_v2.py (FFSR-PointNet)
 │       ├── norm/                     # saved normalization statistics (*.npz)
 │       └── utils/                    # dataset generation, plotting, raster tools
 ├── FFSR-PointNet-Light/              # Lightweight model (8192 context pts, rank-128 decoder)
@@ -64,11 +64,11 @@ FFSR-PointNet/
 ├── Weights/                          # trained checkpoints (see §2)
 ├── scripts/                          # entry points and evaluation utilities (see §6)
 │   └── eval_820/                     # 8.20 evaluation pipeline
-├── Archive_UnusedModels/             # historical code; per-folder docs archived under docs_legacy/
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
 
-Large result rasters are written outside the repo (e.g. `Results`) to keep the repository light.
+Large result rasters are written at runtime to `Results/` (git-ignored) to keep the repository light.
 
 ---
 
@@ -108,6 +108,11 @@ All commands in this document are run **from the repository root** unless stated
 Grid datasets for the CNN baselines live in `Data/dataset/Unet/`. Normalization statistics are stored in each model's `main/norm/`.
 
 ### Pretrained weights (`Weights/`)
+
+> **⚠️ Pretrained checkpoints are NOT included in this repository** (they exceed the
+> hosting limits). The folder only contains a placeholder `readme.txt`.
+> Run the training commands in §3–§5 to produce them, or place your own checkpoints
+> at the paths below.
 
 | Path | Model |
 |---|---|
